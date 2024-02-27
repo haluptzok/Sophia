@@ -798,7 +798,8 @@ if __name__ == '__main__':
     if optimizer_name == 'sophiag':
         # optimizer = opt_func(optim_groups, lr=learning_rate, betas=betas, rho=rho)
         # optimizer = model.configure_optimizers(optimizer_name, weight_decay, learning_rate, (beta1, beta2), rho, device_type)
-        optimizer = opt_func(model.parameters(), lr=1e-4, betas=(0.965, 0.99), rho = 0.04)
+        # optimizer = opt_func(model.parameters(), lr=1e-4, betas=(0.965, 0.99), rho = 0.04)
+        optimizer = opt_func(model.parameters(), lr=args.learning_rate, betas=(0.965, 0.99), rho = 0.04)
     else:
         optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate)
         # optimizer = opt_func(optim_groups, lr=learning_rate, betas=betas, **extra_args)
