@@ -28,6 +28,7 @@ import torch.nn as nn
 from torch.nn import functional as F
 from torch.utils.data import Dataset
 from torch.utils.data.dataloader import DataLoader
+from sophia import SophiaG
 
 # -----------------------------------------------------------------------------
 
@@ -790,8 +791,17 @@ if __name__ == '__main__':
         sys.exit()
 
     # init optimizer
-    # optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate, weight_decay=args.weight_decay, betas=(0.9, 0.99), eps=1e-8)
-    optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate)
+    optimizer_name = 'sophiag'
+    optimizer_dict = {'adamw': torch.optim.AdamW,'sophiag': SophiaG}
+    opt_func = optimizer_dict[optimizer_name]
+
+    if optimizer_name == 'sophiag':
+        # optimizer = opt_func(optim_groups, lr=learning_rate, betas=betas, rho=rho)
+        optimizer = opt_func(model.parameters(), lr=args.learning_rate, betas=betas, rho=rho)
+    else:
+        optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate)
+        # optimizer = opt_func(optim_groups, lr=learning_rate, betas=betas, **extra_args)
+        # optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate, weight_decay=args.weight_decay, betas=(0.9, 0.99), eps=1e-8)
 
     # init dataloader
     batch_loader = InfiniteDataLoader(train_dataset, batch_size=args.batch_size, pin_memory=True, num_workers=args.num_workers)
