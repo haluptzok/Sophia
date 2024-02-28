@@ -804,7 +804,7 @@ if __name__ == '__main__':
         # optimizer = opt_func(optim_groups, lr=learning_rate, betas=betas, **extra_args)
         # optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate, weight_decay=args.weight_decay, betas=(0.9, 0.99), eps=1e-8)
     else:
-        print("Unknown optimizer", optimizer_name)
+        print("Unknown optimizer", args.optimizer)
         exit()
 
     # init dataloader
