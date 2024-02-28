@@ -1,0 +1,299 @@
+{'input_file': 'names.txt', 'work_dir': 'out', 'resume': False, 'sample_only': False, 'num_workers': 4, 'max_steps': 5000, 'device': 'cuda', 'seed': 3407, 'gentext': 1, 'top_k': -1, 'block_size': 32, 'type': 'transformer', 'n_layer': 4, 'n_head': 4, 'n_embd': 64, 'n_embd2': 64, 'batch_size': 512, 'optimizer': 'adam', 'learning_rate': 0.001, 'weight_decay': 0.01}
+running on device: cuda
+vocab_size=65
+vocabulary:
+
+ !$&',-.3:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+len(text,trn_text,tst_text) 1115394 1003857 111537
+dataset determined that: vocab_size=65, block_size=32
+number of parameters: 0.21M
+model #params: 210432
+args.optimizer adam
+step 0 | loss 4.2238 | step time 467.13ms
+step 50 | loss 2.7374 | step time 498.47ms
+step 100 | loss 2.4057 | step time 831.50ms
+step 150 | loss 2.2093 | step time 853.75ms
+step 200 | loss 2.0169 | step time 859.68ms
+step 250 | loss 1.9005 | step time 855.52ms
+step 300 | loss 1.7839 | step time 823.40ms
+step 350 | loss 1.7320 | step time 850.55ms
+step 400 | loss 1.7181 | step time 860.19ms
+step 450 | loss 1.6524 | step time 866.36ms
+step 500 | loss 1.6214 | step time 860.63ms
+step 550 | loss 1.6141 | step time 866.36ms
+step 600 | loss 1.5742 | step time 855.44ms
+step 650 | loss 1.5461 | step time 857.59ms
+step 700 | loss 1.5232 | step time 854.19ms
+step 750 | loss 1.5228 | step time 856.20ms
+step 800 | loss 1.5027 | step time 773.32ms
+step 850 | loss 1.5306 | step time 869.46ms
+step 900 | loss 1.4905 | step time 866.46ms
+step 950 | loss 1.4922 | step time 871.32ms
+step 1000 | loss 1.4845 | step time 870.81ms
+Loss/trn 1.4515 1000
+Loss/tst 1.5349 1000
+test loss 1.5348529815673828 is the best so far, saving model to out/model.pt
+evaluate time 64.89ms
+step 1050 | loss 1.4731 | step time 786.06ms
+step 1100 | loss 1.4703 | step time 834.92ms
+step 1150 | loss 1.4584 | step time 866.47ms
+step 1200 | loss 1.4397 | step time 846.20ms
+step 1250 | loss 1.4620 | step time 859.67ms
+step 1300 | loss 1.4463 | step time 848.69ms
+step 1350 | loss 1.4680 | step time 840.82ms
+step 1400 | loss 1.4595 | step time 843.43ms
+step 1450 | loss 1.4446 | step time 847.03ms
+step 1500 | loss 1.4205 | step time 819.57ms
+step 1550 | loss 1.4302 | step time 812.41ms
+step 1600 | loss 1.3955 | step time 810.79ms
+step 1650 | loss 1.4249 | step time 850.83ms
+step 1700 | loss 1.4476 | step time 854.62ms
+step 1750 | loss 1.4151 | step time 834.98ms
+step 1800 | loss 1.4404 | step time 853.30ms
+step 1850 | loss 1.4072 | step time 853.25ms
+step 1900 | loss 1.4179 | step time 850.68ms
+step 1950 | loss 1.3954 | step time 847.33ms
+step 2000 | loss 1.4024 | step time 854.14ms
+Loss/trn 1.3819 2000
+Loss/tst 1.4457 2000
+test loss 1.4456760883331299 is the best so far, saving model to out/model.pt
+evaluate time 63.68ms
+step 2050 | loss 1.3946 | step time 788.23ms
+step 2100 | loss 1.3984 | step time 845.40ms
+step 2150 | loss 1.3811 | step time 860.89ms
+step 2200 | loss 1.3965 | step time 859.74ms
+step 2250 | loss 1.3903 | step time 758.27ms
+step 2300 | loss 1.3874 | step time 821.94ms
+step 2350 | loss 1.3897 | step time 811.70ms
+step 2400 | loss 1.4213 | step time 822.79ms
+step 2450 | loss 1.3824 | step time 834.29ms
+step 2500 | loss 1.3801 | step time 848.96ms
+step 2550 | loss 1.3773 | step time 821.99ms
+step 2600 | loss 1.3835 | step time 824.16ms
+step 2650 | loss 1.3714 | step time 821.36ms
+step 2700 | loss 1.3799 | step time 810.52ms
+step 2750 | loss 1.3909 | step time 839.96ms
+step 2800 | loss 1.3817 | step time 862.17ms
+step 2850 | loss 1.3672 | step time 852.54ms
+step 2900 | loss 1.3748 | step time 863.51ms
+step 2950 | loss 1.3791 | step time 786.58ms
+step 3000 | loss 1.3723 | step time 599.78ms
+Loss/trn 1.3686 3000
+Loss/tst 1.4251 3000
+test loss 1.425112009048462 is the best so far, saving model to out/model.pt
+evaluate time 123.79ms
+step 3050 | loss 1.3748 | step time 759.12ms
+step 3100 | loss 1.3713 | step time 856.39ms
+step 3150 | loss 1.3682 | step time 847.14ms
+step 3200 | loss 1.3695 | step time 849.06ms
+step 3250 | loss 1.3704 | step time 848.28ms
+step 3300 | loss 1.3726 | step time 846.47ms
+step 3350 | loss 1.3578 | step time 855.78ms
+step 3400 | loss 1.3667 | step time 851.38ms
+step 3450 | loss 1.3477 | step time 832.99ms
+step 3500 | loss 1.3336 | step time 835.77ms
+step 3550 | loss 1.3738 | step time 854.62ms
+step 3600 | loss 1.3592 | step time 847.69ms
+step 3650 | loss 1.3634 | step time 840.76ms
+step 3700 | loss 1.3585 | step time 732.64ms
+step 3750 | loss 1.3699 | step time 803.81ms
+step 3800 | loss 1.3548 | step time 826.74ms
+step 3850 | loss 1.3310 | step time 852.82ms
+step 3900 | loss 1.3586 | step time 840.35ms
+step 3950 | loss 1.3328 | step time 850.81ms
+step 4000 | loss 1.3424 | step time 857.31ms
+Loss/trn 1.3291 4000
+Loss/tst 1.4017 4000
+test loss 1.4017353057861328 is the best so far, saving model to out/model.pt
+evaluate time 63.58ms
+step 4050 | loss 1.3397 | step time 790.60ms
+step 4100 | loss 1.3419 | step time 851.06ms
+step 4150 | loss 1.3432 | step time 852.08ms
+step 4200 | loss 1.3530 | step time 843.48ms
+step 4250 | loss 1.3715 | step time 845.94ms
+step 4300 | loss 1.3581 | step time 854.90ms
+step 4350 | loss 1.3527 | step time 850.06ms
+step 4400 | loss 1.3570 | step time 847.13ms
+step 4450 | loss 1.3278 | step time 782.29ms
+step 4500 | loss 1.3510 | step time 859.32ms
+step 4550 | loss 1.3619 | step time 825.13ms
+step 4600 | loss 1.3429 | step time 870.54ms
+step 4650 | loss 1.3268 | step time 857.99ms
+step 4700 | loss 1.3378 | step time 856.99ms
+step 4750 | loss 1.3330 | step time 858.26ms
+step 4800 | loss 1.3518 | step time 851.53ms
+step 4850 | loss 1.3437 | step time 856.78ms
+step 4900 | loss 1.3476 | step time 856.90ms
+step 4950 | loss 1.3562 | step time 851.29ms
+Loss/trn 1.3000 4999
+Loss/tst 1.4171 4999
+GLos/trn 1.1923, prob=0.3035, cCorrect=1318/2048
+GLos/tst 1.3271, prob=0.2652, cCorrect=1226/2048
+--------------------------------------------------------------------------------
+0 samples that are in train:
+0 samples that are in test:
+10 samples that are new:
+
+CAMILLO:
+Their sposecreption of your sov
+
+I would he cried?
+Revenge, the life hath he patie
+Jove soft my courage speaks: th
+Why, here be being poor things 
+Nor of Buckinghand's mother, bu
+KING RICHARD III:
+--------------------------------------------------------------------------------
+evaluate time 4466.45ms
+Took 90.297 seconds 1.505 minutes 0.025 hours.
+
+{'input_file': 'names.txt', 'work_dir': 'out', 'resume': False, 'sample_only': False, 'num_workers': 4, 'max_steps': 5000, 'device': 'cuda', 'seed': 3407, 'gentext': 1, 'top_k': -1, 'block_size': 32, 'type': 'transformer', 'n_layer': 4, 'n_head': 4, 'n_embd': 64, 'n_embd2': 64, 'batch_size': 512, 'optimizer': 'sophia', 'learning_rate': 0.001, 'weight_decay': 0.01}
+running on device: cuda
+vocab_size=65
+vocabulary:
+
+ !$&',-.3:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+len(text,trn_text,tst_text) 1115394 1003857 111537
+dataset determined that: vocab_size=65, block_size=32
+number of parameters: 0.21M
+model #params: 210432
+args.optimizer sophia
+step 0 | loss 4.2238 | step time 459.34ms
+step 50 | loss 2.7841 | step time 730.32ms
+step 100 | loss 2.4325 | step time 912.84ms
+step 150 | loss 2.2407 | step time 946.73ms
+step 200 | loss 2.0774 | step time 940.89ms
+step 250 | loss 1.9780 | step time 942.32ms
+step 300 | loss 1.8793 | step time 943.74ms
+step 350 | loss 1.8247 | step time 930.52ms
+step 400 | loss 1.8183 | step time 803.67ms
+step 450 | loss 1.7355 | step time 909.21ms
+step 500 | loss 1.7132 | step time 938.49ms
+step 550 | loss 1.7000 | step time 944.45ms
+step 600 | loss 1.6510 | step time 939.17ms
+step 650 | loss 1.6237 | step time 938.63ms
+step 700 | loss 1.5931 | step time 938.43ms
+step 750 | loss 1.5806 | step time 941.65ms
+step 800 | loss 1.5641 | step time 901.40ms
+step 850 | loss 1.5854 | step time 901.07ms
+step 900 | loss 1.5459 | step time 898.66ms
+step 950 | loss 1.5307 | step time 899.58ms
+step 1000 | loss 1.5315 | step time 905.75ms
+Loss/trn 1.4917 1000
+Loss/tst 1.5866 1000
+test loss 1.5866385698318481 is the best so far, saving model to out/model.pt
+evaluate time 51.26ms
+step 1050 | loss 1.5257 | step time 731.85ms
+step 1100 | loss 1.5132 | step time 899.47ms
+step 1150 | loss 1.4928 | step time 900.47ms
+step 1200 | loss 1.4742 | step time 907.95ms
+step 1250 | loss 1.4920 | step time 897.44ms
+step 1300 | loss 1.4756 | step time 897.29ms
+step 1350 | loss 1.4947 | step time 898.66ms
+step 1400 | loss 1.4900 | step time 897.66ms
+step 1450 | loss 1.4740 | step time 897.47ms
+step 1500 | loss 1.4555 | step time 896.44ms
+step 1550 | loss 1.4507 | step time 906.83ms
+step 1600 | loss 1.4168 | step time 898.50ms
+step 1650 | loss 1.4594 | step time 898.64ms
+step 1700 | loss 1.4759 | step time 895.87ms
+step 1750 | loss 1.4364 | step time 857.63ms
+step 1800 | loss 1.4592 | step time 903.26ms
+step 1850 | loss 1.4293 | step time 901.69ms
+step 1900 | loss 1.4374 | step time 898.75ms
+step 1950 | loss 1.4210 | step time 899.99ms
+step 2000 | loss 1.4196 | step time 876.64ms
+Loss/trn 1.3936 2000
+Loss/tst 1.4691 2000
+test loss 1.469116449356079 is the best so far, saving model to out/model.pt
+evaluate time 43.14ms
+step 2050 | loss 1.4170 | step time 860.65ms
+step 2100 | loss 1.4184 | step time 898.38ms
+step 2150 | loss 1.4058 | step time 898.36ms
+step 2200 | loss 1.4090 | step time 899.20ms
+step 2250 | loss 1.4146 | step time 899.02ms
+step 2300 | loss 1.4144 | step time 901.17ms
+step 2350 | loss 1.4140 | step time 896.98ms
+step 2400 | loss 1.4371 | step time 876.53ms
+step 2450 | loss 1.4020 | step time 885.92ms
+step 2500 | loss 1.4032 | step time 934.96ms
+step 2550 | loss 1.3950 | step time 924.60ms
+step 2600 | loss 1.3983 | step time 902.03ms
+step 2650 | loss 1.3955 | step time 906.09ms
+step 2700 | loss 1.3940 | step time 902.34ms
+step 2750 | loss 1.4073 | step time 901.59ms
+step 2800 | loss 1.4016 | step time 900.10ms
+step 2850 | loss 1.3736 | step time 904.01ms
+step 2900 | loss 1.3873 | step time 904.98ms
+step 2950 | loss 1.3980 | step time 898.90ms
+step 3000 | loss 1.3976 | step time 898.53ms
+Loss/trn 1.3700 3000
+Loss/tst 1.4165 3000
+test loss 1.416490912437439 is the best so far, saving model to out/model.pt
+evaluate time 112.58ms
+step 3050 | loss 1.3945 | step time 828.69ms
+step 3100 | loss 1.3762 | step time 752.17ms
+step 3150 | loss 1.3833 | step time 892.79ms
+step 3200 | loss 1.3819 | step time 901.83ms
+step 3250 | loss 1.3918 | step time 900.03ms
+step 3300 | loss 1.3803 | step time 903.86ms
+step 3350 | loss 1.3649 | step time 901.53ms
+step 3400 | loss 1.3769 | step time 898.97ms
+step 3450 | loss 1.3600 | step time 896.31ms
+step 3500 | loss 1.3489 | step time 900.95ms
+step 3550 | loss 1.3874 | step time 902.33ms
+step 3600 | loss 1.3705 | step time 906.20ms
+step 3650 | loss 1.3809 | step time 903.79ms
+step 3700 | loss 1.3711 | step time 904.88ms
+step 3750 | loss 1.3820 | step time 904.90ms
+step 3800 | loss 1.3623 | step time 757.95ms
+step 3850 | loss 1.3456 | step time 903.66ms
+step 3900 | loss 1.3741 | step time 902.88ms
+step 3950 | loss 1.3527 | step time 938.36ms
+step 4000 | loss 1.3454 | step time 941.60ms
+Loss/trn 1.3384 4000
+Loss/tst 1.4023 4000
+test loss 1.4022843837738037 is the best so far, saving model to out/model.pt
+evaluate time 48.36ms
+step 4050 | loss 1.3503 | step time 871.22ms
+step 4100 | loss 1.3595 | step time 906.19ms
+step 4150 | loss 1.3628 | step time 933.53ms
+step 4200 | loss 1.3731 | step time 946.04ms
+step 4250 | loss 1.3878 | step time 945.64ms
+step 4300 | loss 1.3705 | step time 946.88ms
+step 4350 | loss 1.3602 | step time 943.51ms
+step 4400 | loss 1.3745 | step time 942.26ms
+step 4450 | loss 1.3418 | step time 858.24ms
+step 4500 | loss 1.3548 | step time 899.79ms
+step 4550 | loss 1.3768 | step time 902.67ms
+step 4600 | loss 1.3541 | step time 898.31ms
+step 4650 | loss 1.3499 | step time 899.70ms
+step 4700 | loss 1.3550 | step time 904.41ms
+step 4750 | loss 1.3463 | step time 906.22ms
+step 4800 | loss 1.3719 | step time 902.97ms
+step 4850 | loss 1.3535 | step time 903.64ms
+step 4900 | loss 1.3522 | step time 900.65ms
+step 4950 | loss 1.3677 | step time 901.77ms
+Loss/trn 1.3189 4999
+Loss/tst 1.3978 4999
+GLos/trn 1.2187, prob=0.2956, cCorrect=1266/2048
+GLos/tst 1.3164, prob=0.2681, cCorrect=1243/2048
+--------------------------------------------------------------------------------
+0 samples that are in train:
+0 samples that are in test:
+10 samples that are new:
+
+CALUDIO:
+Their spoprized is got whether 
+
+KING RICHARD II:
+Revolt me the hand-braves
+Juliet for thy face; speaks I l
+Gruns you be being poor trial
+NAUTONES:
+KING RICHARD III:
+--------------------------------------------------------------------------------
+test loss 1.3978383541107178 is the best so far, saving model to out/model.pt
+evaluate time 4394.72ms
+Took 96.541 seconds 1.609 minutes 0.027 hours.
+
