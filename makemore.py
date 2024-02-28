@@ -738,6 +738,7 @@ if __name__ == '__main__':
     parser.add_argument('--n-embd2', type=int, default=64, help="number of feature channels elsewhere in the model")
     # optimization
     parser.add_argument('--batch-size', '-b', type=int, default=512, help="batch size during optimization")
+    parser.add_argument('--optimizer', '-z', type=str, default='adam', help="optimizer to use sophia or adam")
     parser.add_argument('--learning-rate', '-l', type=float, default=5e-4, help="learning rate")
     parser.add_argument('--weight-decay', '-w', type=float, default=0.01, help="weight decay")
     args = parser.parse_args()
@@ -791,19 +792,20 @@ if __name__ == '__main__':
         sys.exit()
 
     # init optimizer
-    optimizer_name = 'sophiag'
-    optimizer_dict = {'adamw': torch.optim.AdamW,'sophiag': SophiaG}
-    opt_func = optimizer_dict[optimizer_name]
+    print("args.optimizer", args.optimizer)
 
-    if optimizer_name == 'sophiag':
+    if args.optimizer == 'sophia':
         # optimizer = opt_func(optim_groups, lr=learning_rate, betas=betas, rho=rho)
         # optimizer = model.configure_optimizers(optimizer_name, weight_decay, learning_rate, (beta1, beta2), rho, device_type)
         # optimizer = opt_func(model.parameters(), lr=1e-4, betas=(0.965, 0.99), rho = 0.04)
-        optimizer = opt_func(model.parameters(), lr=args.learning_rate, betas=(0.965, 0.99), rho = 0.04)
-    else:
+        optimizer = SophiaG(model.parameters(), lr=args.learning_rate, betas=(0.965, 0.99), rho = 0.04)
+    elif args.optimizer == 'adam':
         optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate)
         # optimizer = opt_func(optim_groups, lr=learning_rate, betas=betas, **extra_args)
         # optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate, weight_decay=args.weight_decay, betas=(0.9, 0.99), eps=1e-8)
+    else:
+        print("Unknown optimizer", optimizer_name)
+        exit()
 
     # init dataloader
     batch_loader = InfiniteDataLoader(train_dataset, batch_size=args.batch_size, pin_memory=True, num_workers=args.num_workers)
